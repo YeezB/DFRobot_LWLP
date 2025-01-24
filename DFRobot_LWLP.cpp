@@ -16,10 +16,10 @@ DFRobot_LWLP::DFRobot_LWLP(TwoWire *pWire)
   _pWire = pWire;
   
 }
-int DFRobot_LWLP::begin(){
+int DFRobot_LWLP::begin(uint8_t addr){
 
   _pWire->begin();
-  _pWire->beginTransmission(_address);
+  _pWire->beginTransmission(addr);
   if(_pWire->endTransmission() != 0){
     DBG("bus data access error");
     return ERR_DATA_BUS;

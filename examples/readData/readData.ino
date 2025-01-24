@@ -23,7 +23,7 @@ void setup() {
 
   Serial.begin(9600);
   //Init Chip
-  while (lwlp.begin() != 0) {
+  while (lwlp.begin(0x00) != 0) {
   Serial.println("Failed to initialize the chip, please confirm the chip connection");
   delay(1000);
   }

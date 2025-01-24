@@ -80,7 +80,7 @@ public:
    * @brief Initialize the function
    * @return Return 0 indicates a successful initialization, while other values indicates failure and return to error code.
    */
-  int begin();
+  int begin(uint8_t addr);
   /**
    * @fn getData
    * @brief Get sensor data of sigle measurement
